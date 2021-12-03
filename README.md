@@ -56,4 +56,4 @@ Project is created with:
 
 > For unauthenticated requests, the rate limit allows for up to 60 requests per hour. Unauthenticated requests are associated with the originating IP address, and not the user making requests.
 
-For more detailed information, see [rate limiting]("https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting").
+For more detailed information, see [rate limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting).
