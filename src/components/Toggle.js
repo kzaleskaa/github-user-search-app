@@ -6,7 +6,7 @@ const Toggle = () => {
 
   const change = () => {
     const body = document.querySelector("body");
-    body.classList.toggle("dark");
+    body.classList.toggle("light");
     theme === "dark" ? setTheme("light") : setTheme("dark");
   };
 

@@ -40,11 +40,16 @@
 }
 
 .bio {
+  margin: 20px 0px 0px 0px;
   grid-area: bio;
   color: var(--bio-color);
 }
 
 .table-header {
+  font-weight: normal;
+}
+
+tr:not(:first-child) th {
   font-weight: normal;
 }
 
@@ -88,6 +93,10 @@
     padding: 40px;
     grid-template-columns: 140px 1fr;
     grid-template-areas: "avatar name" "avatar bio" "avatar info" "avatar contact";
+  }
+
+  .bio {
+    margin: 0px 0px;
   }
 
   .name {

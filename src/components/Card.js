@@ -51,7 +51,12 @@ const Card = (props) => {
           </li>
           <li>
             <img src="./images/icon-website.svg" alt="" />
-            {checkInfo(props.user.blog)}
+            {props.user.blog && (
+              <a href={props.user.blog} className="available">
+                {props.user.blog}
+              </a>
+            )}
+            {!props.user.blog && checkInfo(props.user.blog)}
           </li>
           <li>
             <img src="./images/icon-twitter.svg" alt="" />
