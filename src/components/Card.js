@@ -19,7 +19,11 @@ const Card = (props) => {
     <div className={styles.card}>
       <img src={props.user.avatar_url} className={styles.avatar} alt="" />
       <div className={styles.name}>
-        <h2>{props.user.name}</h2>
+        <h2>
+          <a className="available" href={`https://github.com/${props.user.login}`}>
+            {props.user.name}
+          </a>
+        </h2>
         <p>
           Joined
           {` ${date.getDate()} ${date.toLocaleString("en-us", {
@@ -51,7 +55,12 @@ const Card = (props) => {
           </li>
           <li>
             <img src="./images/icon-website.svg" alt="" />
-            {checkInfo(props.user.blog)}
+            {props.user.blog && (
+              <a href={props.user.blog} className="available">
+                {props.user.blog}
+              </a>
+            )}
+            {!props.user.blog && checkInfo(props.user.blog)}
           </li>
           <li>
             <img src="./images/icon-twitter.svg" alt="" />
