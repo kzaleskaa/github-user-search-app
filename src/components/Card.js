@@ -19,7 +19,11 @@ const Card = (props) => {
     <div className={styles.card}>
       <img src={props.user.avatar_url} className={styles.avatar} alt="" />
       <div className={styles.name}>
-        <h2>{props.user.name}</h2>
+        <h2>
+          <a className="available" href={`https://github.com/${props.user.login}`}>
+            {props.user.name}
+          </a>
+        </h2>
         <p>
           Joined
           {` ${date.getDate()} ${date.toLocaleString("en-us", {
